@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, inital-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="description" content="...." />
+    <title>Swareekh</title>
+  </head>
+  <body>
+    <script src="index.js"></script>
+    <div id="top">
+      <a href="HOME.html" class="current">Hours</a>
+      <a href="Sandwitches.html">Sandwitches</a>
+      <a href="Containers.html">Containers</a>
+      <a href="dessert.html">Dessert</a>
+    </div>
+    <br />
+    <br />
+    <br />
+    <table id="openingHours">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Opening Hours</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Rows will be inserted here by JavaScript -->
+      </tbody>
+    </table>
+
+    <script>
+      const tableBody = document.getElementById("openingHours");
+      const today = new Date();
+
+      for (let i = 0; i < 7; i++) {
+        const date = new Date();
+        date.setDate(today.getDate() + i);
+
+        const dayName = date.toLocaleDateString("en-US", { weekday: "long" });
+        const dayNum = date.getDay();
+        const dateStr = date.toLocaleDateString("en-US", {
+          month: "short",
+          day: "numeric",
+        });
+
+        const row = `
+          <tr>
+            <td>${dateStr}</td>
+            <td>${dayName}</td>
+            <td>${hours[dayNum]}</td>
+          </tr>
+        `;
+        tableBody.insertAdjacentHTML("beforeend", row);
+      }
+    </script>
+  </body>
+</html>

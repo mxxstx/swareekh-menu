@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Swareekh</title>
+  </head>
+  <body>
+    <script src="index-obf.js"></script>
+
+    <!-- HEADER -->
+
+    <div id="top">
+      <a href="HOME.html">Hours</a>
+      <a href="Sandwitches.html" class="current">Sandwitches</a>
+      <a href="Containers.html">Containers</a>
+      <a href="dessert.html">Dessert</a>
+      <button
+        class="shoppingCart"
+        style="
+          float: right;
+          margin-right: 5%;
+          border: none;
+          background: transparent;
+        "
+        onclick="openCart()"
+      >
+        <svg
+          width="64px"
+          height="64px"
+          viewBox="0 -0.5 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M10.3147 30.9442C11.9424 30.9442 13.2618 29.6247 13.2618 27.9971C13.2618 26.3695 11.9424 25.05 10.3147 25.05C8.68712 25.05 7.36768 26.3695 7.36768 27.9971C7.36768 29.6247 8.68712 30.9442 10.3147 30.9442Z"
+              fill="#5112af"
+            ></path>
+            <path
+              d="M26.5232 30.9442C28.1509 30.9442 29.4703 29.6247 29.4703 27.9971C29.4703 26.3695 28.1509 25.05 26.5232 25.05C24.8956 25.05 23.5762 26.3695 23.5762 27.9971C23.5762 29.6247 24.8956 30.9442 26.5232 30.9442Z"
+              fill="#5112af"
+            ></path>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M30.526 5.89412H7.44717L6.60911 2.28116C6.45421 1.61335 6.1084 1.0662 5.57167 0.63972C5.03494 0.21324 4.42381 0 3.73827 0H1.47353C0.659722 0 0 0.659722 0 1.47353C0 2.28733 0.659722 2.94706 1.47353 2.94706H3.73827L4.42186 5.89412H4.42059L8.21564 22.4326C8.29244 22.7673 8.46515 23.0416 8.73378 23.2556C9.0024 23.4695 9.30842 23.5765 9.65183 23.5765H26.8066C27.1441 23.5765 27.4459 23.4728 27.7121 23.2654C27.9783 23.0581 28.1527 22.7908 28.2354 22.4635L31.9547 7.72829C32.0103 7.50802 32.0147 7.28674 31.968 7.06443C31.9212 6.84212 31.828 6.64136 31.6884 6.46214C31.5488 6.28293 31.377 6.14345 31.1728 6.04372C30.9688 5.94399 30.7532 5.89412 30.526 5.89412Z"
+              fill="url(#paint0_linear_103_1445)"
+            ></path>
+            <g style="mix-blend-mode: hard-light">
+              <g style="mix-blend-mode: hard-light">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8.95667 10.7179C8.94284 10.661 8.93245 10.6034 8.91504 10.5453C8.91504 10.4871 8.91504 10.4287 8.91504 10.3701C8.91504 9.96323 9.0589 9.61592 9.34663 9.32819C9.63435 9.04047 9.98167 8.89661 10.3886 8.89661C10.7285 8.89661 11.0321 9.00165 11.2993 9.21174C11.5665 9.42183 11.7402 9.69203 11.8205 10.0224L13.9565 18.817L13.9567 18.8175C13.9705 18.8744 13.9809 18.932 13.9878 18.9901C13.9948 19.0483 13.9983 19.1067 13.9983 19.1653C13.9983 19.5722 13.8544 19.9195 13.5667 20.2072C13.279 20.4949 12.9317 20.6388 12.5248 20.6388C12.1848 20.6388 11.8813 20.5338 11.614 20.3237C11.3468 20.1136 11.1731 19.8434 11.0929 19.5131L8.95667 10.7179ZM17.6405 10.059C17.5603 9.72864 17.3865 9.45844 17.1193 9.24835C16.8521 9.03826 16.5485 8.93321 16.2086 8.93321C15.8017 8.93321 15.4544 9.07707 15.1666 9.3648C14.8789 9.65252 14.7351 9.99984 14.7351 10.4067C14.7351 10.4653 14.7385 10.5237 14.7455 10.5819C14.7525 10.64 14.7629 10.6976 14.7767 10.7545L16.9129 19.5497C16.9931 19.88 17.1668 20.1502 17.4341 20.3603C17.7013 20.5704 18.0049 20.6754 18.3448 20.6754C18.7517 20.6754 19.099 20.5315 19.3867 20.2438C19.6744 19.9561 19.8183 19.6088 19.8183 19.2019C19.8183 19.1433 19.8148 19.0849 19.8079 19.0267C19.8009 18.9686 19.7905 18.911 19.7767 18.8541L19.7766 18.8536L17.6405 10.059Z"
+                  fill="white"
+                  fill-opacity="0.6"
+                ></path>
+              </g>
+            </g>
+            <defs>
+              <linearGradient
+                id="paint0_linear_103_1445"
+                x1="0"
+                y1="0"
+                x2="19.7144"
+                y2="29.6608"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#e01ce3"></stop>
+                <stop offset="1" stop-color="#1100ff"></stop>
+              </linearGradient>
+            </defs>
+          </g>
+        </svg>
+      </button>
+    </div>
+
+    <!-- END OF HEADER -->
+
+    <!-- CHECK OUT -->
+    <div id="checkOut">
+        <div id="checkOutHeader">
+            <div><svg onclick="hideCheckOut()" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <polygon style="fill:#8000ff;" points="175.669,420.061 230.356,365.374 153.794,288.812 503.792,288.812 503.792,223.188 153.794,223.188 230.356,146.626 175.669,91.938 11.607,256 "></polygon> <polygon style="fill:#bb00ff;" points="175.669,91.938 230.356,146.626 153.794,223.188 503.792,223.188 503.792,256 11.607,256 "></polygon> <path d="M175.669,431.669L0,256L175.669,80.331l66.295,66.295l-68.354,68.354H512v82.039H173.609l68.354,68.354L175.669,431.669z M23.215,256l152.454,152.454l43.08-43.08l-84.77-84.77h361.605v-49.208H133.979l84.77-84.77l-43.08-43.08L23.215,256z"></path> <rect x="115.512" y="117.371" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 70.7861 426.4764)" style="fill:#FFFFFF;" width="16.415" height="162.414"></rect> </g></svg></div>
+             <div class="title">
+                <h1>check out</h1>
+            </div>
+        </div>
+        <div id="checkOutPage">
+            <div id="infoPage">
+              <p>Pick up date and time</p>
+              <div class="name"">
+                <input type="date"
+                id="dateInput">
+                <input type="time"
+                id="timeInput">
+
+            </div>
+              <br>
+              <p>personal information</p>
+                <div class="name">
+                    <input id="firstName" type="text"  placeholder="first name" required>
+                </div>
+                <div class="name">
+                    <input id="lastName" type="text"  placeholder="last name" required>
+                </div>
+                <div class="name">
+                  <input id="emailAddress" type="text"  placeholder="E-Mail">
+              </div>
+                <div class="name">
+                    <input id="phoneNumber"  type="text" pattern="\d{10}" placeholder="mobile number" required>
+                </div>
+                <br>
+                <P>Order notes</P>
+                <div class="name">
+                    <textarea name="additionalComments" id="commentsection" placeholder="additional comments"></textarea>
+                </div>
+            </div>
+
+
+            <div id="checkoutOrder">
+              <p style="text-align: center">order details</p>
+              <div id="checkOutMenuContainer">
+                <div id="checkOutItems">
+                  
+                  <div id="checkOutItems1"></div>
+                  <div id="checkOutItems2"></div>
+                </div>
+                <div id="checkOutQuantity"></div>
+              </div>
+              <br>
+              total
+              <div id="checkOutTotal"></div>
+                <div>
+                  <br>
+                  <button id="proccedButton" onclick="sendToTelegram();">procced</button>
+                </div>
+            </div>
+
+            <div id="receipt">
+              <button class="close"  onclick="hideReceipt()">
+               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10.0303 8.96965C9.73741 8.67676 9.26253 8.67676 8.96964 8.96965C8.67675 9.26255 8.67675 9.73742 8.96964 10.0303L10.9393 12L8.96966 13.9697C8.67677 14.2625 8.67677 14.7374 8.96966 15.0303C9.26255 15.3232 9.73743 15.3232 10.0303 15.0303L12 13.0607L13.9696 15.0303C14.2625 15.3232 14.7374 15.3232 15.0303 15.0303C15.3232 14.7374 15.3232 14.2625 15.0303 13.9696L13.0606 12L15.0303 10.0303C15.3232 9.73744 15.3232 9.26257 15.0303 8.96968C14.7374 8.67678 14.2625 8.67678 13.9696 8.96968L12 10.9393L10.0303 8.96965Z" fill="#7829a3"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25ZM2.75 12C2.75 6.89137 6.89137 2.75 12 2.75C17.1086 2.75 21.25 6.89137 21.25 12C21.25 17.1086 17.1086 21.25 12 21.25C6.89137 21.25 2.75 17.1086 2.75 12Z" fill="#7829a3"></path> </g></svg>
+              </button>
+              <p>order placed</p>
+              <p>your order will be ready for pickup at</p>
+              <p id="dateOfPickup"></p>
+              <p id="timeOfPickup"></p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- END OF CHECKOUT -->
+
+    <!-- SHOPPING CART -->
+    <div id="cartConfirmation">
+      <svg
+        fill="#40a40a"
+        viewBox="0 0 32 32"
+        id="icon"
+        xmlns="http://www.w3.org/2000/svg"
+        stroke="#40a40a"
+      >
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></g>
+        <g id="SVGRepo_iconCarrier">
+          <defs>
+            <style>
+              .cls-1 {
+                fill: none;
+              }
+            </style>
+          </defs>
+          <polygon
+            points="14 21.414 9 16.413 10.413 15 14 18.586 21.585 11 23 12.415 14 21.414"
+          ></polygon>
+          <path
+            d="M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2Zm0,26A12,12,0,1,1,28,16,12,12,0,0,1,16,28Z"
+          ></path>
+        </g>
+      </svg>
+      <p>your item has been</p>
+      <p>added to cart!</p>
+    </div>
+    <div id="cartWindow">
+      <div id="cartBox">
+        <div id="cartHeading">
+          <h1>Cart</h1>
+          <button onclick="closeCart()" class="close">
+            <svg
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              fill="#000000"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <defs>
+                  <path
+                    id="right-a"
+                    d="M2.29289322,0.292893219 C2.68341751,-0.0976310729 3.31658249,-0.0976310729 3.70710678,0.292893219 C4.09763107,0.683417511 4.09763107,1.31658249 3.70710678,1.70710678 L1.70710678,3.70710678 C1.31658249,4.09763107 0.683417511,4.09763107 0.292893219,3.70710678 C-0.0976310729,3.31658249 -0.0976310729,2.68341751 0.292893219,2.29289322 L2.29289322,0.292893219 Z"
+                  ></path>
+                  <path
+                    id="right-c"
+                    d="M3.41421356,4 L13.0014708,4 C13.5529433,4 14,4.44771525 14,5 C14,5.55228475 13.5529433,6 13.0014708,6 L3.41421356,6 L5.70710678,8.29289322 C6.09763107,8.68341751 6.09763107,9.31658249 5.70710678,9.70710678 C5.31658249,10.0976311 4.68341751,10.0976311 4.29289322,9.70710678 L0.292893219,5.70710678 C-0.0976310729,5.31658249 -0.0976310729,4.68341751 0.292893219,4.29289322 L4.29289322,0.292893219 C4.68341751,-0.0976310729 5.31658249,-0.0976310729 5.70710678,0.292893219 C6.09763107,0.683417511 6.09763107,1.31658249 5.70710678,1.70710678 L3.41421356,4 Z"
+                  ></path>
+                </defs>
+                <g
+                  fill="none"
+                  fill-rule="evenodd"
+                  transform="matrix(-1 0 0 1 19 7)"
+                >
+                  <g transform="translate(3 1)">
+                    <mask id="right-b" fill="#ffffff">
+                      <use xlink:href="#right-a"></use>
+                    </mask>
+                    <use
+                      fill="#D8D8D8"
+                      fill-rule="nonzero"
+                      xlink:href="#right-a"
+                    ></use>
+                    <g fill="#FFA0A0" mask="url(#right-b)">
+                      <rect
+                        width="24"
+                        height="24"
+                        transform="translate(-8 -8)"
+                      ></rect>
+                    </g>
+                  </g>
+                  <mask id="right-d" fill="#ffffff">
+                    <use xlink:href="#right-c"></use>
+                  </mask>
+                  <use
+                    fill="#000000"
+                    fill-rule="nonzero"
+                    xlink:href="#right-c"
+                  ></use>
+                  <g fill="#7600FF" mask="url(#right-d)">
+                    <rect
+                      width="24"
+                      height="24"
+                      transform="translate(-5 -7)"
+                    ></rect>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </button>
+        </div>
+
+        <div id="menuOrder">
+          <div id="menuItemOrder"></div>
+          <div id="quantityOrder">
+            <div id="menuQuantityOrder"></div>
+            <div id="menuQuantityPrice"></div>
+          </div>
+        </div>
+
+        <div id="cartCheckout">
+          <div id="totalCheckout">
+            <p>total:</p>
+            <p style="color: darkorchid" id="Total_Order">$0.00</p>
+          </div>
+          <button onclick="showCheckOut()" id="checkOutbtn">check out</button>
+          <button style="margin-top: 3%" onclick="clearCart()">
+            clear cart
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- END OF SHOPPING CART -->
+
+    <!-- MENU -->
+
+    <div class="wrapper">
+      <div class="item">
+        <h2 class="header">Foul special</h2>
+        <h2 class="header">فول مخصوص</h2>
+        <img src="images/foul special.jpg" class="images" />
+        <p>Half pita bread fava bean with swareekh spices</p>
+        <p>نص رغيف فول زيت و ليمون</p>
+        <p class="money">$3.50</p>
+        <button onclick="addToCart('Foul special',3.50,1)">order</button>
+      </div>
+
+      <div class="item">
+        <h2 class="header">Foul Alex</h2>
+        <h2 class="header">فول اسكندرانى</h2>
+        <img src="images/Foul Alex.jpg" class="images" />
+        <p>Half pita bread fava bean with cucumber, tomatoes and onion</p>
+        <p>نص رغيف فول بالخلطه الاسكندرانى</p>
+        <p class="money">$3.50</p>
+        <button onclick="addToCart('Foul alex', 3.50,1)">order</button>
+      </div>
+
+      <div class="item">
+        <h2 class="header">Foul Asafery</h2>
+        <h2 class="header">فول اسكندرانى</h2>
+        <img src="images/Foul Asafery.jpg" class="images" />
+        <p>Half pita bread fava bean with lemon pickle</p>
+        <p>فول عصفيرى</p>
+        <p class="money">$3.99</p>
+        <button onclick="addToCart('Foul Asafery', 3.99,1)">order</button>
+      </div>
+
+      <div class="item">
+        <h2 class="header">Foul with Sojok</h2>
+        <h2 class="header">فول اسكندرانى</h2>
+        <img src="images/foul Sujuk.jpg" class="images" />
+        <p>Half pita bread fava bean and with spicy sojok</p>
+        <p>نص رغيف فول بخلطة السجق المشطشطه</p>
+        <p class="money">$4.50</p>
+        <button onclick="addToCart('Foul With Sojok', 4.50,1)">order</button>
+      </div>
+
+      <div class="item">
+        <h2 class="header">Foul with linseed oil</h2>
+        <h2 class="header">فول بالزيت الحار</h2>
+        <img src="images/foul with linseed oil.jpg" class="images" />
+        <p>Half pita bread fava bean with linseed oil</p>
+        <p class="money">$3.50</p>
+        <button onclick="addToCart('Foul With Linseed', 3.50,1)">order</button>
+      </div>
+
+      <div class="item">
+        <h2 class="header">Foul w boiled/fried egg</h2>
+        <h2 class="header">فول بالبيض المسلوق او المقلى</h2>
+        <img src="images/foul with egg.jpg" class="images" />
+        <p>Half pita bread fava bean with boiled or fried egg</p>
+        <p>نص رغيف فول بالبيض المسلوق او المقلى</p>
+        <p class="money">$4.50</p>
+        <button onclick="addToCart('Foul w boiled/fried egg', 4.50,1)">
+          order
+        </button>
+      </div>
+
+      <div class="item">
+        <h2 class="header">Swareekh Dynamite</h2>
+        <h2 class="header">ديناميت صواريخ</h2>
+        <img src="images/dynamite.jpg" class="images" />
+        <p>
+          Half pita bread fava bean, falafel, egg ,fries and eggplant (super
+          spicy)
+        </p>
+        <p>نص رغيف فول ، فلافل ، بدنجان ،بطاطس، فلفل و بيض</p>
+        <p class="money">$4.25</p>
+        <button onclick="addToCart('Swareekh Dynamite', 4.25,1)">order</button>
+      </div>
+
+      <div class="item">
+        <h2 class="header">Falafel wrap</h2>
+        <h2 class="header">فلافل</h2>
+        <img src="images/Foul special.png" class="images" />
+        <p>Falafel with salad,pickle,tahina in a Lebanese bread</p>
+        <p>فلافل مع سلطه ، طحينه ومخلل فى عيش لبنانى</p>
+        <p class="money">$7.50</p>
+        <button onclick="addToCart('Falafel wrap', 7.50,1)">order</button>
+      </div>
+
+      <div class="item">
+        <h2 class="header">Falafel with eggplant</h2>
+        <h2 class="header">فلافل بالبدنجان</h2>
+        <img src="images/Foul special.png" class="images" />
+        <p>Half pita bread fava bean with boiled or fried egg</p>
+        <p>فلافل مع بدنجان فى نص رغيف</p>
+        <p class="money">$4.50</p>
+        <button onclick="addToCart('Falafel with eggplant', 3.50,1)">
+          order
+        </button>
+      </div>
+
+      <div class="item">
+        <h2 class="header">Makaly</h2>
+        <h2 class="header">حبشتكنات</h2>
+        <img src="images/Foul special.png" class="images" />
+        <p>Half pita bread falafel, eggplant, fries</p>
+        <p>فلافل مع بدنجان مع فلفل و بطاطس فى نص رغيف</p>
+        <p class="money">$4.50</p>
+        <button onclick="addToCart('Makaly', 4.50,1)">order</button>
+      </div>
+
+      <div class="item">
+        <h2 class="header">Eggplant</h2>
+        <h2 class="header">بذنجان</h2>
+        <img src="images/Foul special.png" class="images" />
+        <p>Half pita bread fried eggplant with garlic and vinegar</p>
+        <p>نص رغيف بذنجان مقلى بالخل و الثوم</p>
+        <p class="money">$3.99</p>
+        <button onclick="addToCart('Eggplant', 3.99,1)">order</button>
+      </div>
+
+      <div class="item">
+        <h2 class="header">Moussaka</h2>
+        <h2 class="header">مسقعة</h2>
+        <img src="images/moussaka.jpg" class="images" />
+        <p>Fried eggplant and potatoes in a tomato sauce in a pita bread</p>
+        <p>نص رغيف بدنجان مع الفلفل و البطاطس فى الصلصه</p>
+        <p class="money">$3.99</p>
+        <button onclick="addToCart('Moussaka ', 3.99,1)">order</button>
+      </div>
+
+      <div class="item">
+        <h2 class="header">Fries</h2>
+        <h2 class="header">بطاطس عاده</h2>
+        <img src="images/fries.jpg" class="images" />
+        <p>Half pita bread fried potatoes</p>
+        <p>نص رغيف بطاطس بالدقه مع طحينه او كاتشب و ميونيز</p>
+        <p class="money">$3.50</p>
+        <button onclick="addToCart('Fries', 3.50,1)">order</button>
+      </div>
+
+      <div class="item">
+        <h2 class="header">Special Fries</h2>
+        <h2 class="header">بطاطس مخصوص</h2>
+        <img src="images/special fries.jpg" class="images" />
+        <p>Fried fries with salad and tahina sauce in a half pita bread</p>
+        <p>نص رغيف بطاطس بالدقه مع سلطه و طحينه</p>
+        <p class="money">$3.75</p>
+        <button onclick="addToCart('Special Fries', 3.75,1)">order</button>
+      </div>
+
+      <div class="item">
+        <h2 class="header">Syrian Fries</h2>
+        <h2 class="header">بطاطس سورى</h2>
+        <img src="images/Foul special.png" class="images" />
+        <p>fries in labanese bread</p>
+        <p>بطاطس مع ثوميه و مخلل فى عيش لبنانى</p>
+        <p class="money">$6.50</p>
+        <button onclick="addToCart('Syrian Fries', 6.50,1)">order</button>
+      </div>
+
+      <div class="item">
+        <h2 class="header">Cheese With Tomato</h2>
+        <h2 class="header">جبنه بالطماطم</h2>
+        <img src="images/cheese with tomato.jpg" class="images" />
+        <p>White cheese with tomato in a pita bread</p>
+        <p>نص رغيف جبنه اسطنبولى و جبنه قريش و مش بلدى و طماطم</p>
+        <p class="money">$4.50</p>
+        <button onclick="addToCart('Cheese With Tomato', 4.50,1)">order</button>
+      </div>
+      <div class="item">
+        <h2 class="header">falafel</h2>
+        <h2 class="header">فلافل</h2>
+        <img src="images/falafel.jpg" class="images" />
+        <p>falafel with salad and tahini</p>
+        <p>نص رغيف جبنه اسطنبولى و جبنه قريش و مش بلدى و طماطم</p>
+        <p class="money">$3.50</p>
+        <button onclick="addToCart('falafel', 3.50,1)">order</button>
+      </div>
+    </div>
+    </div>
+
+    <!-- END OF MENU -->
+  </body>
+</html>
